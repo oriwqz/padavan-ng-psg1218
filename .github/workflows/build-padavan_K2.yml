@@ -43,6 +43,8 @@ jobs:
     - name: Clone source code
       run: |
         git clone --depth=1 https://e.coding.net/hanwckf/rt-n56u/padavan.git /opt/rt-n56u
+        cd /opt/rt-n56u/toolchain-mipsel
+        sh dl_toolchain.sh
         mkdir -p /opt/images/
         #
         cd /opt/Btools/Setconfig/
@@ -57,8 +59,8 @@ jobs:
         #cd /opt/Btools/Patch/
         #sh install_Patch.sh
         #
-        cd /opt/Btools/build_toolchain
-        sh install_build_toolchain.sh
+        #cd /opt/Btools/build_toolchain
+        #sh install_build_toolchain.sh
         #
     - name: Build Firmware
       run: |
