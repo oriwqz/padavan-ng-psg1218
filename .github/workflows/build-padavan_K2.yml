@@ -42,25 +42,23 @@ jobs:
         pkg-config zlib1g-dev libgmp3-dev libmpc-dev libmpfr-dev libncurses5-dev libltdl-dev gcc-multilib
     - name: Clone source code
       run: |
-        git clone --depth=1 https://github.com/chongshengB/rt-n56u.git /opt/rt-n56u
-        cd /opt/rt-n56u/toolchain-mipsel
-        sh dl_toolchain.sh
+        git clone --depth=1 https://e.coding.net/hanwckf/rt-n56u/padavan.git /opt/rt-n56u
         mkdir -p /opt/images/
         #
         cd /opt/Btools/Setconfig/
         sh install_Setconfig.sh
         #
-        cd /opt/Btools/LANG_CN/
-        sh install_LANG_CN.sh
+        #cd /opt/Btools/LANG_CN/
+        #sh install_LANG_CN.sh
         #
-         cd /opt/Btools/Theme/
+        cd /opt/Btools/Theme/
         sh install_Theme.sh
         #
-        cd /opt/Btools/Patch/
-        sh install_Patch.sh
+        #cd /opt/Btools/Patch/
+        #sh install_Patch.sh
         #
-        #cd /opt/Btools/build_toolchain
-        #sh install_build_toolchain.sh
+        cd /opt/Btools/build_toolchain
+        sh install_build_toolchain.sh
         #
     - name: Build Firmware
       run: |
