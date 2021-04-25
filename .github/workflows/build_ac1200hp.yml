@@ -64,7 +64,7 @@ jobs:
         #
     - name: Build Firmware
       env:
-        TNAME: PR4A
+        TNAME: R4A
       run: |
         cd /opt/rt-n56u/trunk
         if [ ! -f configs/templates/$TNAME.config ] ; then
