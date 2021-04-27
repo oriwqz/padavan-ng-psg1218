@@ -1,5 +1,5 @@
 #修改TNAME: K2P-5.0 中的K2P-5.0为你需要编译的型号，注意名称要与configs/templates/目录下的名字相同
-name: Build Padavan_R4A
+name: Build MI-R4A
 
 on: 
   release:
@@ -64,7 +64,7 @@ jobs:
         #
     - name: Build Firmware
       env:
-        TNAME: R4A
+        TNAME: MI-R4A
       run: |
         cd /opt/rt-n56u/trunk
         if [ ! -f configs/templates/$TNAME.config ] ; then
