@@ -43,7 +43,8 @@ jobs:
     - name: Clone source code
       run: |
         #git clone --depth=1 https://e.coding.net/hanwckf/rt-n56u/padavan.git /opt/rt-n56u
-        git clone --depth=1 https://github.com/keke1023/Padavan.git /opt/padavan
+        #git clone --depth=1 https://github.com/keke1023/Padavan.git /opt/padavan
+        git clone --depth=1 https://github.com/meisreallyba/padavan-4.4.git /opt/padavan
         cd /opt/padavan/toolchain-mipsel
         sh dl_toolchain.sh
         mkdir -p /opt/images/
